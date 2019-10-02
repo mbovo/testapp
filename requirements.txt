@@ -1,0 +1,10 @@
+pytest
+pytest-xdist
+pytest-cov
+pytest-pep8
+python-coveralls
+pyyaml
+flask
+flask_restful
+flasgger
+gevent
