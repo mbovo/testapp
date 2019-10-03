@@ -4,7 +4,7 @@ import time
 import json
 import redis
 
-from flask import Flask, render_template, request
+from flask import Flask, request
 from flask_restful import Api, Resource
 
 import core
