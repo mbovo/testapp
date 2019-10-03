@@ -11,7 +11,10 @@ PROPERTIES = {
     'server': '',
     'port': '5000',
     'log_level': 'INFO',
-    'stop_timeout': '1'
+    'stop_timeout': '1',
+    'redis_host': "localhost",
+    "redis_port": "6379",
+    "app_version": "1.0.0"
 }
 
 
@@ -25,8 +28,8 @@ class Config(object):
         start = time.time()
         self.properties = {}
         for v in os.environ:
-            if v.startswith('GINDROP_'):
-                k = v.replace('GINDROP_', '').lower()
+            if v.startswith('TESTAPP'):
+                k = v.replace('TESTAPP', '').lower()
                 if k in PROPERTIES:
                     PROPERTIES[k] = os.environ[v]
                 else:
